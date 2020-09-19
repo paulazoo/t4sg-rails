@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module CollegeArchApi
+module T4sgApi
   class Application < Rails::Application
     config.action_cable.mount_path = '/websocket'
     # Initialize configuration defaults for originally generated Rails version.
@@ -33,7 +33,7 @@ module CollegeArchApi
 
     config.middleware.insert_before(0, Rack::Cors) do
       allow do
-        origins 'college-arch.herokuapp.com', 'localhost:3000', '127.0.0.1:3000', 'collegearch.org', 'www.collegearch.org'
+        origins 't4sg.herokuapp.com', 'localhost:3000', '127.0.0.1:3000'
         resource '*', headers: :any, methods: %i[get post delete put patch options head]
       end
     end

@@ -41,8 +41,8 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
-  config.web_socket_server_url = 'wss://college-arch-api.herokuapp.com/websocket'
-  config.action_cable.allowed_request_origins = ['https://college-arch.herokuapp.com', 'http://localhost:3000', 'https://www.collegearch.org']
+  config.web_socket_server_url = 'wss://t4sg-api.herokuapp.com/websocket'
+  config.action_cable.allowed_request_origins = ['https://t4sg.herokuapp.com', 'http://localhost:3000']
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -59,7 +59,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "college_arch_api_production"
+  # config.active_job.queue_name_prefix = "t4sg_api_production"
 
   config.action_mailer.perform_caching = false
 

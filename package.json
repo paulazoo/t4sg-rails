@@ -1,5 +1,5 @@
 {
-  "name": "congregate_api",
+  "name": "t4sg_api",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",

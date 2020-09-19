@@ -44,27 +44,15 @@ class ApplicationController < ActionController::API
     end
   end
 
-  def logged_in?
+  def logged_in
     !!current_user
   end
 
   def authenticate_user
-    render(json: { message: 'Please login or refresh token' }, status: :ok) unless logged_in?
-  end
-
-  def is_mentor
-    (current_user.account_type == 'Mentor')
+    render(json: { message: 'Please login or refresh token' }, status: :ok) unless logged_in
   end
 
   def is_master
-    (current_user.email == 'paulazhu@college.harvard.edu' || \
-      current_user.email == 'reachpaulazhu@gmail.com' || \
-      current_user.email == 'team.collegearch@gmail.com' || \
-      current_user.email == 'tech.collegearch@gmail.com' || \
-      current_user.email == 'programming.collegearch@gmail.com' || \
-      current_user.email == 'snalani731@gmail.com' || \
-      current_user.email == 'llin1@college.harvard.edu' || \
-      current_user.email == 'lindalin2812@gmail.com'
-    )
+    (current_user.email == 'paulazhu@college.harvard.edu')
   end
 end

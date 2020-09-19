@@ -1,3 +1,0 @@
-class NewsletterEmail < ApplicationRecord
-  
-end
